@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/client"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/client"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/server"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/server"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/secure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Secure"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <TextView
+            android:id="@+id/bluetooth_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/bluetooth_disabled"
+            android:textColor="@color/red" />
+
+        <ImageView
+            android:id="@+id/bluetooth_status_img"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_above="@+id/bluetooth_status"
+            android:contentDescription="@string/bluetooth"
+            android:src="@drawable/bluetooth_disable" />
+    </RelativeLayout>
+</LinearLayout>
+
